@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.3580" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-11-18T08:12:28" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Google Search" timestamp="2020-11-18T08:12:28" tests="1" file="C:\Applications\CodeceptjsAssignment\tests\googlesearch_test.js" time="4.8480" failures="0">
+    <testcase name="Google Search: Search Keyword" time="4.8480" classname="Search Keyword">
+    </testcase>
+  </testsuite>
+  <testsuite name="Google Search" timestamp="2020-11-18T08:12:34" tests="1" file="C:\Applications\CodeceptjsAssignment\tests\googlesearchautocomplete_test.js" time="1.6490" failures="0">
+    <testcase name="Google Search: Search Keyword Autocomplete" time="1.6490" classname="Search Keyword Autocomplete">
+    </testcase>
+  </testsuite>
+  <testsuite name="Google Search" timestamp="2020-11-18T08:12:35" tests="1" file="C:\Applications\CodeceptjsAssignment\tests\googlesearchnewsstat_test.js" time="4.8610" failures="0">
+    <testcase name="Google Search: Search Keyword and verify news stat" time="4.8610" classname="Search Keyword and verify news stat">
+    </testcase>
+  </testsuite>
+</testsuites>

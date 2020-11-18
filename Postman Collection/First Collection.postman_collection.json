@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "75623b09-50d9-4aad-970e-4fc58c5419db",
+		"name": "First Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Search Results",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "567a767e-8ff0-46ff-a2de-927113c10058",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.test(\"Keyword\", function () {\r",
+							"    pm.expect(jsonData.queries.request[0].searchTerms).to.eql('Crimson Education');\r",
+							"});\r",
+							"pm.test(\"Safe\", function () {\r",
+							"    pm.expect(jsonData.queries.request[0].safe).to.eql('off');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyDMIeGOV1nQmkF-P3PxYnWL9_m_-CnzVhs&q=Crimson Education&cx=9db4dc620d6c7e692",
+					"protocol": "https",
+					"host": [
+						"customsearch",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"customsearch",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "AIzaSyDMIeGOV1nQmkF-P3PxYnWL9_m_-CnzVhs"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "Crimson Education"
+						},
+						{
+							"key": "cx",
+							"value": "9db4dc620d6c7e692"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Maths Result",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "db0fd9d5-dd20-47c6-8866-5c0763ba3225",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.test(\"Keyword\", function () {\r",
+							"    pm.expect(jsonData.queries.request[0].title).to.eql('Google Custom Search - 5 5=');\r",
+							"});\r",
+							"pm.test(\"Safe\", function () {\r",
+							"    pm.expect(jsonData.queries.request[0].safe).to.eql('off');\r",
+							"});\r",
+							"pm.test(\"Safe\", function () {\r",
+							"    pm.expect(jsonData.queries.request[0].count).to.eql(10);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://customsearch.googleapis.com/customsearch/v1?key=AIzaSyDMIeGOV1nQmkF-P3PxYnWL9_m_-CnzVhs&q=5+5=&cx=9db4dc620d6c7e692",
+					"protocol": "https",
+					"host": [
+						"customsearch",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"customsearch",
+						"v1"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "AIzaSyDMIeGOV1nQmkF-P3PxYnWL9_m_-CnzVhs"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "5+5="
+						},
+						{
+							"key": "cx",
+							"value": "9db4dc620d6c7e692"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
